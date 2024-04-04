@@ -1,6 +1,7 @@
 package com.rauladrianoramos.pedrapapeltesoura;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +22,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void selecionarPedra(View view) {
+        verificarGanhador("pedra");
+    }
+
+    public void selecionarPapel(View view) {
+        verificarGanhador("papel");
+    }
+
+    public void selecionarTesoura(View view) {
+        verificarGanhador("tesoura");
+    }
+
+    private void verificarGanhador(String escolhaUsuario){
+        System.out.println("Item clicado: " + escolhaUsuario);
+    }
+
 }
